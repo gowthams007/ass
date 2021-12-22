@@ -1,0 +1,18 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+type Query{
+    alldirector:[director]!
+    director(id:ID):director!
+}
+
+type director{
+    id:ID!
+    name:String!
+    gender:String!
+    totalMovies:Int
+}
+type Mutation {
+    createDirector(name: String!,gender:String!, totalMovies: Int): director!
+}
